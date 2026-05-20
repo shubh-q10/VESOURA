@@ -1,19 +1,6 @@
 {
-  "name": "vesoura",
-  "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-  "dev": "tailwindcss -i ./input.css -o ./output.css --watch",
-  "test": "echo \"Error: no test specified\" && exit 1"
-},
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
   "dependencies": {
-    "@tailwindcss/cli": "^4.3.0"
-  },
-  "devDependencies": {
+    "@tailwindcss/cli": "^4.3.0",
     "tailwindcss": "^4.3.0"
   }
 }
