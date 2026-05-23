@@ -11,103 +11,175 @@
 
     <!-- Header -->
 
-    <header
-      class="fixed top-0 left-0 w-full bg-black text-white z-50 bg-gray-900"
-    >
-      <nav
-        aria-label="Global"
-        class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
-      >
-        <div class="flex lg:flex-1">
-          <a href="#" class="-m-1.5 p-1.5">
-            <img
-              src="https://t4.ftcdn.net/jpg/04/06/91/91/360_F_406919161_J0pGxe1sewqnk5dnvyRS77MKmEd6SVac.jpg"
-              alt=""
-              class="h-8 w-auto"
-            />
-          </a>
-          <h1 class="text-2xl text-white ml-3  ">VESOURA</h1>
-        </div>
-        <div class="flex lg:hidden">
+    <header class="fixed top-0 left-0 w-full bg-gray-900 text-white z-50 shadow-lg">
+
+  <nav class="mx-auto max-w-7xl px-6 py-4">
+
+    <div class="flex items-center justify-between">
+
+      <!-- Logo -->
+      <div class="flex items-center gap-3">
+
+        <a href="#">
+          <img
+            src="https://t4.ftcdn.net/jpg/04/06/91/91/360_F_406919161_J0pGxe1sewqnk5dnvyRS77MKmEd6SVac.jpg"
+            alt="VESOURA Logo"
+            class="h-8 w-auto rounded"
+          >
+        </a>
+
+        <h1 class="text-xl md:text-2xl font-bold">
+          VESOURA
+        </h1>
+
+      </div>
+
+      <!-- Desktop Navigation -->
+      <div class="hidden lg:flex items-center gap-10">
+
+        <a href="#" class="font-semibold hover:text-amber-300">
+          Home
+        </a>
+
+        <a href="./other_pages/aboutUs.html"
+          class="font-semibold hover:text-amber-300">
+          About Us
+        </a>
+
+        <!-- Services dropdown -->
+        <div class="relative group">
+
           <button
-            type="button"
-            command="show-modal"
-            commandfor="mobile-menu"
-            class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-400"
-          >
-            <span class="sr-only">Open main menu</span>
-            <svg
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.5"
-              data-slot="icon"
-              aria-hidden="true"
-              class="size-6"
-            >
-              <path
-                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
+            class="font-semibold hover:text-amber-300">
+            Services
           </button>
-        </div>
-        <el-popover-group class="hidden lg:flex lg:gap-x-12">
-          <a href="#" class="text-sm/6 font-semibold text-white">Home</a>
-          <a href="./other_pages/aboutUs.html" class="text-sm/6 font-semibold text-white">Aboout Us</a>
-          <div class="relative group">
-            <div class="relative group">
-              <button class="text-sm/6 font-semibold text-white">
-                Services
-              </button>
 
-              <div
-                class="absolute top-full left-0 hidden group-hover:block w-48 bg-white rounded-lg shadow-lg"
-              >
-                <a
-                  href="#"
-                  class="block px-4 py-2 text-gray-800 hover:bg-gray-100"
-                >
-                  Web Development
-                </a>
+          <div class="absolute top-full left-0 hidden group-hover:block w-52 bg-white rounded-lg shadow-xl overflow-hidden">
 
-                <a
-                  href="#"
-                  class="block px-4 py-2 text-gray-800 hover:bg-gray-100"
-                >
-                  App Development
-                </a>
+            <a href="#"
+              class="block px-4 py-3 text-black hover:bg-gray-100">
+              Web Development
+            </a>
 
-                <a
-                  href="#"
-                  class="block px-4 py-2 text-gray-800 hover:bg-gray-100"
-                >
-                  UI/UX Design
-                </a>
+            <a href="#"
+              class="block px-4 py-3 text-black hover:bg-gray-100">
+              App Development
+            </a>
 
-                <a
-                  href="#"
-                  class="block px-4 py-2 text-gray-800 hover:bg-gray-100"
-                >
-                  SEO Services
-                </a>
-              </div>
-            </div>
+            <a href="#"
+              class="block px-4 py-3 text-black hover:bg-gray-100">
+              UI/UX Design
+            </a>
+
+            <a href="#"
+              class="block px-4 py-3 text-black hover:bg-gray-100">
+              SEO Services
+            </a>
+
           </div>
-        </el-popover-group>
 
-        <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a
-            href="./other_pages/contact.html"
-            class=" bg-red-600 from-amber-700 via-green-400 to-red-500 animate-pulse text-white font-bold px-6 py-2 rounded-3xl hover:bg-green-800"
-          >
-            Contact Us
-          </a>
         </div>
-      </nav>
-    </header>
 
+        <a
+          href="./other_pages/contact.html"
+          class="bg-red-600 px-6 py-2 rounded-3xl font-bold hover:bg-green-700 transition"
+        >
+          Contact Us
+        </a>
+
+      </div>
+
+      <!-- Mobile Hamburger -->
+      <button
+        id="menuButton"
+        class="lg:hidden text-white"
+      >
+
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="w-8 h-8"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor">
+
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"
+          />
+
+        </svg>
+
+      </button>
+
+    </div>
+
+    <!-- Mobile menu -->
+    <div
+      id="mobileMenu"
+      class="hidden lg:hidden mt-5 bg-gray-800 rounded-xl p-4"
+    >
+
+      <div class="flex flex-col gap-4">
+
+        <a href="#" class="hover:text-amber-300">
+          Home
+        </a>
+
+        <a href="./other_pages/aboutUs.html"
+          class="hover:text-amber-300">
+          About Us
+        </a>
+
+        <div class="border-t border-gray-600 pt-3">
+          <p class="font-bold text-amber-400">
+            Services
+          </p>
+
+          <div class="flex flex-col mt-3 gap-2">
+
+            <a href="#">Web Development</a>
+
+            <a href="#">App Development</a>
+
+            <a href="#">UI/UX Design</a>
+
+            <a href="#">SEO Services</a>
+
+          </div>
+        </div>
+
+        <a
+          href="./other_pages/contact.html"
+          class="bg-red-600 text-center py-3 rounded-xl font-bold"
+        >
+          Contact Us
+        </a>
+
+      </div>
+
+    </div>
+
+  </nav>
+
+</header>
+
+<script>
+
+const menuButton =
+document.getElementById("menuButton");
+
+const mobileMenu =
+document.getElementById("mobileMenu");
+
+menuButton.addEventListener("click",()=>{
+
+mobileMenu.classList.toggle("hidden");
+
+});
+
+</script>
     <!-- header section -->
 
     <div class="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32">
@@ -212,16 +284,18 @@
 
     <!-- content section -->
 
-    <div class="bg-gray-900 text-white py-24 px-8">
+    <!-- Content Section -->
+
+<div class="bg-gray-900 text-white py-16 md:py-24 px-6 md:px-10">
 
     <!-- Heading -->
     <div class="text-center max-w-4xl mx-auto">
 
-        <h1 class="text-5xl font-bold from-yellow-50 via-red-50 to-yellow-400 animate-bounce text-amber-400">
+        <h1 class="text-3xl md:text-5xl font-bold text-amber-400 animate-pulse">
             Our Digital Marketing Process
         </h1>
 
-        <p class="mt-6 text-gray-400 text-xl ">
+        <p class="mt-6 text-gray-400 text-base md:text-xl leading-relaxed">
             Our proven 4-step process ensures your brand receives a tailored
             digital marketing strategy that delivers measurable results and
             sustainable growth.
@@ -229,103 +303,112 @@
 
     </div>
 
-    <!-- Process Section -->
-    <div class="mt-24 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+    <!-- Process Grid -->
+
+    <div class="mt-16 md:mt-24 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
 
         <!-- Step 1 -->
-        <div class="relative">
 
-            <!-- Circle + Line -->
+        <div class="bg-gray-800 rounded-2xl p-6">
+
             <div class="flex items-center">
 
-                <div class="w-18 h-18 rounded-full bg-amber-500 flex items-center justify-center text-black font-bold text-3xl z-10">
+                <div class="w-16 h-16 md:w-20 md:h-20 rounded-full bg-amber-500 flex items-center justify-center text-black font-bold text-2xl md:text-3xl">
+
                     1
+
                 </div>
 
-                <div class="h-[2px] flex-1 bg-amber-600"></div>
+                <div class="hidden lg:block h-[2px] flex-1 bg-amber-600"></div>
 
             </div>
 
-            <h2 class="mt-8 text-4xl animate-pulse font-bold">
+            <h2 class="mt-6 text-2xl md:text-3xl font-bold">
                 Brand Consultation
             </h2>
 
-            <p class="mt-5 text-gray-400 text-xl leading-relaxed">
+            <p class="mt-4 text-gray-400 text-sm md:text-lg leading-relaxed">
                 We start by understanding your brand identity, business goals,
                 target audience, and current digital marketing challenges.
             </p>
 
         </div>
 
-
         <!-- Step 2 -->
-        <div class="relative">
+
+        <div class="bg-gray-800 rounded-2xl p-6">
 
             <div class="flex items-center">
 
-                <div class="w-18 h-18 rounded-full bg-amber-500 flex items-center justify-center text-black font-bold text-3xl z-10">
+                <div class="w-16 h-16 md:w-20 md:h-20 rounded-full bg-amber-500 flex items-center justify-center text-black font-bold text-2xl md:text-3xl">
+
                     2
+
                 </div>
 
-                <div class="h-[2px] flex-1 bg-amber-600"></div>
+                <div class="hidden lg:block h-[2px] flex-1 bg-amber-600"></div>
 
             </div>
 
-            <h2 class="mt-8 text-4xl animate-pulse font-bold">
+            <h2 class="mt-6 text-2xl md:text-3xl font-bold">
                 Strategy Development
             </h2>
 
-            <p class="mt-5 text-gray-400 text-xl leading-relaxed">
+            <p class="mt-4 text-gray-400 text-sm md:text-lg leading-relaxed">
                 Our digital marketing experts create a customized social media
                 and content strategy tailored to your specific business needs.
             </p>
 
         </div>
 
-
         <!-- Step 3 -->
-        <div class="relative">
+
+        <div class="bg-gray-800 rounded-2xl p-6">
 
             <div class="flex items-center">
 
-                <div class="w-18 h-18 rounded-full bg-amber-500 flex items-center justify-center text-black font-bold text-3xl z-10">
+                <div class="w-16 h-16 md:w-20 md:h-20 rounded-full bg-amber-500 flex items-center justify-center text-black font-bold text-2xl md:text-3xl">
+
                     3
+
                 </div>
 
-                <div class="h-[2px] flex-1 bg-amber-600"></div>
+                <div class="hidden lg:block h-[2px] flex-1 bg-amber-600"></div>
 
             </div>
 
-            <h2 class="mt-8 text-4xl animate-pulse font-bold">
+            <h2 class="mt-6 text-2xl md:text-3xl font-bold">
                 Content Implementation
             </h2>
 
-            <p class="mt-5 text-gray-400 text-xl leading-relaxed">
+            <p class="mt-4 text-gray-400 text-sm md:text-lg leading-relaxed">
                 We execute the strategy with professional content creation,
                 graphic design, and social media management across platforms.
             </p>
 
         </div>
 
-
         <!-- Step 4 -->
-        <div class="relative">
+
+        <div class="bg-gray-800 rounded-2xl p-6">
 
             <div class="flex items-center">
 
-                <div class="w-18 h-18 rounded-full bg-amber-500 flex items-center justify-center text-black font-bold text-3xl">
+                <div class="w-16 h-16 md:w-20 md:h-20 rounded-full bg-amber-500 flex items-center justify-center text-black font-bold text-2xl md:text-3xl">
+
                     4
+
                 </div>
 
             </div>
 
-            <h2 class="mt-8 text-4xl font-bold animate-pulse">
+            <h2 class="mt-6 text-2xl md:text-3xl font-bold">
                 Performance Optimization
             </h2>
 
-            <p class="mt-5 text-gray-400 text-xl leading-relaxed">
-                Continuous monitoring, analytics review, and strategy
-                refinement based on real-time performance data and ROI metrics.
+            <p class="mt-4 text-gray-400 text-sm md:text-lg leading-relaxed">
+                Continuous monitoring, analytics review, and strategy refinement
+                based on real-time performance data and ROI metrics.
             </p>
 
         </div>
@@ -338,123 +421,229 @@
 
     <!-- our team members -->
 
-    <div class="bg-gray-950 py-24 sm:py-32">
-      <div class="mx-auto grid max-w-7xl gap-20 px-6 lg:px-8 xl:grid-cols-3">
-        <div class="max-w-xl">
-          <h2
-            class="text-3xl  font-semibold tracking-tight text-pretty text-white sm:text-4xl"
-          >
-            Meet our leadership
-          </h2>
-          <p class="mt-6 text-lg/8 text-gray-400">
-            We’re a <span class="text-amber-300">dynamic group</span> of
-            individuals who are passionate about what we do and dedicated to
-            delivering the best results for our clients.
-          </p>
-          
+    <!-- Team Section -->
+
+<div class="bg-gray-950 py-16 md:py-24">
+
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+
+        <div class="grid gap-16 xl:grid-cols-3">
+
+            <!-- Left Intro -->
+
+            <div class="max-w-xl">
+
+                <h2 class="text-3xl md:text-4xl font-bold text-white">
+
+                    Meet our leadership
+
+                </h2>
+
+                <p class="mt-6 text-base md:text-lg text-gray-400 leading-relaxed">
+
+                    We're a
+                    <span class="text-amber-300">
+                        dynamic group
+                    </span>
+
+                    of individuals passionate about what we do and dedicated
+                    to delivering the best results for our clients.
+
+                </p>
+
+            </div>
+
+            <!-- Team Grid -->
+
+            <ul
+                role="list"
+                class="grid grid-cols-1 sm:grid-cols-2 gap-8 xl:col-span-2"
+            >
+
+                <!-- Person 1 -->
+
+                <li class="bg-gray-900 rounded-2xl p-6">
+
+                    <div class="flex flex-col sm:flex-row items-center gap-6">
+
+                        <img
+                            src="/images/image.png"
+                            alt="Yogesh"
+                            class="w-28 h-28 md:w-32 md:h-32 rounded-full object-cover"
+                        >
+
+                        <div class="text-center sm:text-left">
+
+                            <h3 class="font-bold text-white text-lg">
+                                Yogesh
+                            </h3>
+
+                            <p class="text-indigo-400">
+                                Co-Founder / CEO
+                            </p>
+
+                            <a
+                                href="#"
+                                class="text-gray-300 hover:text-amber-300"
+                            >
+                                LinkedIn
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </li>
+
+                <!-- Person 2 -->
+
+                <li class="bg-gray-900 rounded-2xl p-6">
+
+                    <div class="flex flex-col sm:flex-row items-center gap-6">
+
+                        <img
+                            src="./images/image.png"
+                            alt="Karan"
+                            class="w-28 h-28 md:w-32 md:h-32 rounded-full object-cover"
+                        >
+
+                        <div class="text-center sm:text-left">
+
+                            <h3 class="font-bold text-white text-lg">
+                                Karan
+                            </h3>
+
+                            <p class="text-indigo-400">
+                                Co-Founder / CTO
+                            </p>
+
+                            <a
+                                href="#"
+                                class="text-gray-300 hover:text-amber-300"
+                            >
+                                LinkedIn
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </li>
+
+                <!-- Person 3 -->
+
+                <li class="bg-gray-900 rounded-2xl p-6">
+
+                    <div class="flex flex-col sm:flex-row items-center gap-6">
+
+                        <img
+                            src="https://avatars.githubusercontent.com/u/206682100?v=4"
+                            alt="Shubham"
+                            class="w-28 h-28 md:w-32 md:h-32 rounded-full object-cover"
+                        >
+
+                        <div class="text-center sm:text-left">
+
+                            <h3 class="font-bold text-white text-lg">
+                                Shubham
+                            </h3>
+
+                            <p class="text-indigo-400">
+                                Web Developer
+                            </p>
+
+                            <a
+                                href="#"
+                                class="text-gray-300 hover:text-amber-300"
+                            >
+                                LinkedIn
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </li>
+
+                <!-- Person 4 -->
+
+                <li class="bg-gray-900 rounded-2xl p-6">
+
+                    <div class="flex flex-col sm:flex-row items-center gap-6">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=facearea&w=256&h=256&q=80"
+                            alt="Tanisha"
+                            class="w-28 h-28 md:w-32 md:h-32 rounded-full object-cover"
+                        >
+
+                        <div class="text-center sm:text-left">
+
+                            <h3 class="font-bold text-white text-lg">
+                                Tanisha
+                            </h3>
+
+                            <p class="text-indigo-400">
+                                HR
+                            </p>
+
+                            <a
+                                href="#"
+                                class="text-gray-300 hover:text-amber-300"
+                            >
+                                LinkedIn
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </li>
+
+            </ul>
+
         </div>
-        <ul
-          role="list"
-          class="grid gap-x-8 gap-y-12 sm:grid-cols-2 sm:gap-y-16 xl:col-span-2"
-        >
-          <li>
-            <div class="flex items-center gap-x-6">
-              <img
-                src="/images/image.png"
-                alt=""
-                class="size-38 rounded-full outline-1 -outline-offset-1 outline-white/10"
-              />
-              <div>
-                <h3 class="text-base/7 font-bold tracking-tight text-white">
-                  Yogesh
-                </h3>
-                <p class="text-sm/6 font-semibold text-indigo-400">
-                  Co-Founder / CEO
-                </p>
-                <a
-                  class="text-white"
-                  href="http://"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >linkedin
-                </a>
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="flex items-center gap-x-6">
-              <img
-                src="./images/image.png"
-                alt=""
-                class="size-38 rounded-full outline-1 -outline-offset-1 outline-white/10"
-              />
-              <div>
-                <h3 class="text-base/7 font-bold tracking-tight text-white">
-                  Karan
-                </h3>
-                <p class="text-sm/6 font-semibold text-indigo-400">
-                  Co-Founder / CTO
-                </p>
-                <a
-                  class="text-white"
-                  href="http://"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >linkedin</a
-                >
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="flex items-center gap-x-6">
-              <img
-                src="https://avatars.githubusercontent.com/u/206682100?v=4"
-                alt=""
-                class="size-38 rounded-full outline-1 -outline-offset-1 outline-white/10"
-              />
-              <div>
-                <h3 class="text-base/7 font-bold tracking-tight text-white">
-                  Shubham
-                </h3>
-                <p class="text-sm/6 font-semibold text-indigo-400">Web dev</p>
-                <a
-                  class="text-white"
-                  href="http://"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >linkedin</a
-                >
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="flex items-center gap-x-6">
-              <img
-                src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                alt=""
-                class="size-38 rounded-full outline-1 -outline-offset-1 outline-white/10"
-              />
-              <div>
-                <h3 class="text-base/7 font-bold tracking-tight text-white">
-                  Tanisha
-                </h3>
-                <p class="text-sm/6 font-semibold text-indigo-400">HR</p>
-                <a
-                  class="text-white"
-                  href="http://"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >linkedin</a
-                >
-              </div>
-            </div>
-          </li>
-        </ul>
-      </div>
+
     </div>
 
+</div>
 
-    <!-- bottom section -->
+
+    <!-- Footer Section -->
+
+<footer class="bg-[#020f2b] px-6 md:px-14 py-10">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+        <div class="text-gray-400 text-center md:text-left">
+          © 2026 VESOURA, Inc. All rights reserved.
+        </div>
+
+        <div class="flex gap-6">
+          <a href="">
+            <img
+              src="../images/instalogo.png"
+              class="w-8 h-8 hover:scale-110 transition"
+              alt=""
+            />
+          </a>
+
+          <a href="">
+            <img
+              src="../images/x logo.jpg"
+              class="w-8 h-8 rounded-full hover:scale-110 transition"
+              alt=""
+            />
+          </a>
+
+          <a href="">
+            <img
+              src="../images/3f0318f5-939f-404a-ae40-1260485bfff6.jpg"
+              class="w-8 h-8 rounded-full hover:scale-110 transition"
+              alt=""
+            />
+          </a>
+        </div>
+      </div>
+    </footer>
 
     
   </body>
