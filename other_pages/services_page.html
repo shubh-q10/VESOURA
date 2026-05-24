@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <title>Document</title>
+</head>
+<body class="bg-gray-900">
+    <header
+      class="fixed top-0 left-0 w-full bg-gray-900 text-white z-50 shadow-lg"
+    >
+      <nav class="mx-auto max-w-7xl px-6 py-4">
+        <div class="flex items-center justify-between">
+          <!-- Logo -->
+          <div class="flex items-center gap-3">
+            <a href="#">
+              <img
+                src="https://t4.ftcdn.net/jpg/04/06/91/91/360_F_406919161_J0pGxe1sewqnk5dnvyRS77MKmEd6SVac.jpg"
+                alt="VESOURA Logo"
+                class="h-8 w-auto rounded"
+              />
+            </a>
+
+            <a href="../index.html" target="_blank" rel="noopener noreferrer">
+              <h1
+                class="text-xl md:text-2xl animate-pulse from-amber-50 via-white to-amber-500 font-bold"
+              >
+                VESOURA
+              </h1>
+            </a>
+          </div>
+
+          <!-- Desktop Navigation -->
+          <div class="hidden lg:flex items-center gap-10">
+            <a href="#" class="font-semibold hover:text-amber-300"> Home </a>
+
+            <a
+              href="./other_pages/aboutUs.html"
+              class="font-semibold hover:text-amber-300"
+            >
+              About Us
+            </a>
+
+            <!-- Services dropdown -->
+            <div class="relative group">
+              <button class="font-semibold hover:text-amber-300">
+                Services
+              </button>
+
+              <div
+                class="absolute top-full left-0 hidden group-hover:block w-52 bg-white rounded-lg shadow-xl overflow-hidden"
+              >
+                <a
+                  href="#"
+                  class="block px-4 py-3 text-black hover:bg-gray-100"
+                >
+                  Web Development
+                </a>
+
+                <a
+                  href="#"
+                  class="block px-4 py-3 text-black hover:bg-gray-100"
+                >
+                  App Development
+                </a>
+
+                <a
+                  href="#"
+                  class="block px-4 py-3 text-black hover:bg-gray-100"
+                >
+                  UI/UX Design
+                </a>
+
+                <a
+                  href="#"
+                  class="block px-4 py-3 text-black hover:bg-gray-100"
+                >
+                  SEO Services
+                </a>
+                <a
+                  href="#"
+                  class="block px-4 py-3 text-black hover:bg-gray-100"
+                >
+                  AI Automation
+                </a>
+                <a
+                  href="#"
+                  class="block px-4 py-3 text-black hover:bg-gray-100"
+                >
+                  Performance Marketing
+                </a>
+                <a
+                  href="#"
+                  class="block px-4 py-3 text-black hover:bg-gray-100"
+                >
+                  UGC Video
+                </a>
+              </div>
+            </div>
+
+            <a
+              href="./other_pages/contact.html"
+              class="bg-red-600 px-6 py-2 rounded-3xl animate-pulse from-red-600 via-yellow-50 to-green-500 font-bold hover:bg-green-700 transition"
+            >
+              Contact Us
+            </a>
+          </div>
+
+          <!-- Mobile Hamburger -->
+          <button id="menuButton" class="lg:hidden text-white">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-8 h-8"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <!-- Mobile menu -->
+        <div
+          id="mobileMenu"
+          class="hidden lg:hidden mt-5 bg-gray-800 rounded-xl p-4"
+        >
+          <div class="flex flex-col gap-4">
+            <a href="#" class="hover:text-amber-300"> Home </a>
+
+            <a href="./other_pages/aboutUs.html" class="hover:text-amber-300">
+              About Us
+            </a>
+
+            <div class="border-t border-gray-600 pt-3">
+              <p class="font-bold text-amber-400">Services</p>
+
+              <div class="flex flex-col mt-3 gap-2">
+                <a href="#">Web Development</a>
+
+                <a href="#">App Development</a>
+
+                <a href="#">UI/UX Design</a>
+
+                <a href="#">SEO Services</a>
+
+                <a href="#">AI Automation</a>
+
+                <a href="#">Performance Marketing/a>
+
+                <a href="#">UGC Video</a>
+
+
+              </div>
+            </div>
+
+            <a
+              href="./other_pages/contact.html"
+              class="bg-red-600 text-center py-3 rounded-xl font-bold"
+            >
+              Contact Us
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="pt-24">
+        <h1 class="text-white">web Development</h1>
+        <h1 class="text-white">web Development</h1>
+        <h1 class="text-white">web Development</h1>
+
+
+    </div>
+
+    
+</body>
+</html>
